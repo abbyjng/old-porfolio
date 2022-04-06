@@ -114,40 +114,36 @@
         >
       </div>
       <p>See below for some examples of Moolah in use.</p>
-      <p id="expand-text">Click the images to expand.</p>
-      <div class="img-set-grid">
+      <p>Click the images to expand.</p>
+      <div class="img-set-grid expand-imgs">
         <img
+          id="moolah-paid"
           src="./images/moolahPaid.jpg"
           alt="Moolah's /paid command."
-          onclick="expandImg(this)"
         />
         <img
           src="./images/moolahChannelList.jpg"
           alt="Moolah's /channellist command."
-          onclick="expandImg(this)"
         />
         <img
           id="moolah-bought"
           src="./images/moolahBought.jpg"
           alt="Moolah's /bought command."
-          onclick="expandImg(this)"
         />
         <img
           id="moolah-log"
           src="./images/moolahLog.jpg"
           alt="Moolah's auto-updating log message."
-          onclick="expandImg(this)"
         />
         <img
           id="moolah-history"
           src="./images/moolahHistory.jpg"
           alt="Moolah's /history command."
-          onclick="expandImg(this)"
         />
         <img
+          id="moolah-setuser"
           src="./images/moolahSetUser.jpg"
           alt="Moolah's /setuser command."
-          onclick="expandImg(this)"
         />
       </div>
       <p>
@@ -173,30 +169,6 @@
       <p>Abigail Ng &copy; 2022</p>
     </footer>
 
-    <script>
-      function expandImg(elt) {
-        if (screen.width <= 650) {
-          if (elt.style.position == "" || elt.style.position == "static") {
-            elt.style.position = "fixed";
-            elt.style.left = "50%";
-            elt.style.top = "50%";
-            elt.style.transform = "translate(-50%, -50%)";
-            elt.style.margin = "0 auto";
-            elt.style.padding = "1000px";
-            elt.style.maxWidth = "90%";
-            elt.style.maxHeight = "90%";
-            elt.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-          } else {
-            elt.style.position = "static";
-            elt.style.transform = "none";
-            elt.style.margin = "auto";
-            elt.style.padding = "5px";
-            elt.style.backgroundColor = "transparent";
-            elt.style.maxHeight = "100%";
-            elt.style.width = "90%";
-          }
-        }
-      }
-    </script>
+    <script src="js/expand.js"></script>
   </body>
 </html>
