@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cf1bb65acb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L6TSR8XZG6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-L6TSR8XZG6");
+    </script>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Moolah</title>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="./index.html" id="header-name">Abigail Ng</a>
+        <div id="header-tabs">
+          <a href="./index.html"
+            ><i class="fa-solid fa-user"></i><br class="mobile-only" />
+            About Me</a
+          >
+          <a href="./experience.html"
+            ><i class="fa-solid fa-laptop-code"></i><br class="mobile-only" />
+            Experience</a
+          >
+          <a href="./blog.html"
+            ><i class="fa-solid fa-pencil"></i><br class="mobile-only" />
+            Blog</a
+          >
+          <a class="current" href="./moolah.html"
+            ><i class="fa-brands fa-discord"></i><br class="mobile-only" />
+            Moolah</a
+          >
+          <a href="./contact.html"
+            ><i class="fa-solid fa-phone"></i><br class="mobile-only" />
+            Contact Me</a
+          >
+        </div>
+      </nav>
+      <h1>Moolah</h1>
+    </header>
+
+    <main id="main">
+      <div id="moolah-layout">
+        <img
+          class="cover-img"
+          src="./images/moolah.jpg"
+          alt="The logo of Moolah."
+        />
+        <div class="right-text">
+          <p>
+            The Discord bot designed to help keep group finances simple. Moolah
+            can be used for any group from a short vacation group of 15 to a
+            long term roommate relationship of 3. This easy-to-use bot
+            simplifies what would normally be dozens of Venmo charges into just
+            a few, or as many as you'd like. Moolah reduces clutter and shows
+            you only what you need to know while also maintaining all the
+            details you might need.
+          </p>
+          <p>
+            Using simple commands, transactions can easily be logged, deleted,
+            and reviewed, all while using a non-intrusive edited logging embed
+            to always display the overall charges for the group.
+          </p>
+          <p>
+            Moolah is a project which I started working on during the summer of
+            2020 in my free time. It was originally called RoomieBot and was
+            personalized specifically for me and my roommates. It was
+            bug-ridden, but it worked enough for the four of us. However, when
+            the summer of 2021 rolled around, I decided I wanted to challenge
+            myself to make this bot better than ever, and I worked hard to
+            design it in a manner that's easy for new users to understand so
+            that anyone could set it up if they wanted to. Moolah is on its
+            final iteration, and I hope to continue to maintain it as it grows
+            in its userbase.
+          </p>
+        </div>
+      </div>
+      <div class="link-bar" id="links">
+        <a href="https://top.gg/bot/839639502767259669" target="_blank"
+          ><i class="fa-solid fa-robot"></i> Top.gg</a
+        >
+        <a href="https://github.com/abbyjng/Moolah" target="_blank"
+          ><i class="fa-brands fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=839639502767259669&scope=bot"
+          target="_blank"
+          ><i class="fa-brands fa-discord"></i> Try me!</a
+        >
+      </div>
+      <p>See below for some examples of Moolah in use.</p>
+      <p id="expand-text">Click the images to expand.</p>
+      <div class="img-set-grid">
+        <img
+          src="./images/moolahPaid.jpg"
+          alt="Moolah's /paid command."
+          onclick="expandImg(this)"
+        />
+        <img
+          src="./images/moolahChannelList.jpg"
+          alt="Moolah's /channellist command."
+          onclick="expandImg(this)"
+        />
+        <img
+          id="moolah-bought"
+          src="./images/moolahBought.jpg"
+          alt="Moolah's /bought command."
+          onclick="expandImg(this)"
+        />
+        <img
+          id="moolah-log"
+          src="./images/moolahLog.jpg"
+          alt="Moolah's auto-updating log message."
+          onclick="expandImg(this)"
+        />
+        <img
+          id="moolah-history"
+          src="./images/moolahHistory.jpg"
+          alt="Moolah's /history command."
+          onclick="expandImg(this)"
+        />
+        <img
+          src="./images/moolahSetUser.jpg"
+          alt="Moolah's /setuser command."
+          onclick="expandImg(this)"
+        />
+      </div>
+      <p>
+        The Moolah Community is a Discord server to help new users with any
+        questions they have about the bot.
+      </p>
+      <div class="img-set-flex">
+        <img
+          src="./images/moolahCommunity.jpg"
+          alt="A screenshot of the Moolah Community FAQ channel."
+        />
+      </div>
+      <p>Before Moolah was RoomeieBot, a significantly less nuanced bot.</p>
+      <div class="img-set-flex">
+        <img
+          src="./images/roomieBot.jpg"
+          alt="A snippet of what RoomieBot looked like."
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>Abigail Ng &copy; 2022</p>
+    </footer>
+
+    <script>
+      function expandImg(elt) {
+        if (screen.width <= 650) {
+          if (elt.style.position == "" || elt.style.position == "static") {
+            elt.style.position = "fixed";
+            elt.style.left = "50%";
+            elt.style.top = "50%";
+            elt.style.transform = "translate(-50%, -50%)";
+            elt.style.margin = "0 auto";
+            elt.style.padding = "1000px";
+            elt.style.maxWidth = "90%";
+            elt.style.maxHeight = "90%";
+            elt.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+          } else {
+            elt.style.position = "static";
+            elt.style.transform = "none";
+            elt.style.margin = "auto";
+            elt.style.padding = "5px";
+            elt.style.backgroundColor = "transparent";
+            elt.style.maxHeight = "100%";
+            elt.style.width = "90%";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

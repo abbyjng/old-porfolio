@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cf1bb65acb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L6TSR8XZG6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-L6TSR8XZG6");
+    </script>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact Me</title>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="./index.html" id="header-name">Abigail Ng</a>
+        <div id="header-tabs">
+          <a href="./index.html"
+            ><i class="fa-solid fa-user"></i><br class="mobile-only" />
+            About Me</a
+          >
+          <a href="./experience.html"
+            ><i class="fa-solid fa-laptop-code"></i><br class="mobile-only" />
+            Experience</a
+          >
+          <a href="./blog.html"
+            ><i class="fa-solid fa-pencil"></i><br class="mobile-only" />
+            Blog</a
+          >
+          <a href="./moolah.html"
+            ><i class="fa-brands fa-discord"></i><br class="mobile-only" />
+            Moolah</a
+          >
+          <a class="current" href="./contact.html"
+            ><i class="fa-solid fa-phone"></i><br class="mobile-only" />
+            Contact Me</a
+          >
+        </div>
+      </nav>
+      <h1>Contact Me</h1>
+    </header>
+
+    <main id="main">
+      <div class="contact-box">
+        <form action="https://formspree.io/f/mjvloovn" method="POST">
+          <fieldset>
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <br />
+            <label for="email">Email: </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+            />
+            <br />
+            <label for="phone">Phone number: </label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="(123) 456-7890"
+            />
+            <br />
+            <label for="message">Message: </label><br />
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              placeholder="Send me a message"
+            ></textarea>
+            <br />
+            <button type="submit" class="submit-button">Send</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>Abigail Ng &copy; 2022</p>
+    </footer>
+  </body>
+</html>
