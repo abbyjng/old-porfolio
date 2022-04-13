@@ -349,12 +349,12 @@ textarea {
     grid-area: wide3;
   }
 
-  .img-set-flex {
+  .blog-post .img-set-flex {
     flex-direction: column;
     height: 600px;
   }
 
-  .img-set-flex img {
+  .blog-post .img-set-flex img {
     flex-grow: 0;
   }
 }
@@ -494,7 +494,7 @@ textarea {
     padding-left: 10px;
   }
 
-  .img-set-flex {
+  .blog-post .img-set-flex {
     width: 600px;
   }
 }
