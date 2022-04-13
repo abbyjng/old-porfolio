@@ -5,7 +5,6 @@ document.querySelectorAll(".expand-imgs img").forEach((elt) => {
       this.style.left = "50%";
       this.style.top = "50%";
       this.style.transform = "translate(-50%, -50%)";
-      this.style.margin = "0 auto";
       this.style.padding = "1000px";
       this.style.maxWidth = "90%";
       this.style.maxHeight = "90%";
@@ -13,7 +12,6 @@ document.querySelectorAll(".expand-imgs img").forEach((elt) => {
     } else {
       this.style.position = "static";
       this.style.transform = "none";
-      this.style.margin = "auto";
       this.style.padding = "5px";
       this.style.backgroundColor = "transparent";
       this.style.maxHeight = "100%";

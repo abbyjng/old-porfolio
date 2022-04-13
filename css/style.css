@@ -109,13 +109,12 @@ footer {
 
 img {
   width: 200px;
-  /* min-width: 200px; */
-  /* max-width: 80%; */
   align-self: center;
   padding: 5px;
   margin: 5px;
   border: 2px solid #e6b741;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 img:hover {
@@ -207,7 +206,24 @@ p {
 }
 
 .img-set-grid {
-  grid-template-columns: 1fr;
+  grid-template:
+    "tall ." auto
+    "tall ." auto
+    "tall ." auto
+    "med med" auto
+    "wide1 wide1" auto / 4fr 3fr;
+}
+
+#moolah-log {
+  grid-area: tall;
+}
+
+#moolah-history {
+  grid-area: med;
+}
+
+#moolah-bought {
+  grid-area: wide1;
 }
 
 .contact-box {
@@ -238,6 +254,10 @@ textarea {
   background-color: #e6c268;
 }
 
+.desktop-only {
+  display: none;
+}
+
 @keyframes tabAnimation {
   from {
     font-size: 0px;
@@ -249,7 +269,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 620px) {
   .mobile-only {
     display: none;
   }
@@ -262,6 +282,11 @@ textarea {
     font-size: 16px;
   }
 
+  nav a.current {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
   nav a:hover {
     animation: none;
     background-color: #fadf9a;
@@ -269,12 +294,6 @@ textarea {
 
   i {
     font-size: 16px;
-  }
-
-  #index-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 5%;
   }
 
   a.skip:focus {
@@ -322,18 +341,6 @@ textarea {
       "wide2 wide2 wide3 wide3" auto / 2fr 1fr 1fr 1fr;
   }
 
-  #moolah-log {
-    grid-area: tall;
-  }
-
-  #moolah-history {
-    grid-area: med;
-  }
-
-  #moolah-bought {
-    grid-area: wide1;
-  }
-
   #moolah-setuser {
     grid-area: wide2;
   }
@@ -341,9 +348,22 @@ textarea {
   #moolah-paid {
     grid-area: wide3;
   }
+
+  .img-set-flex {
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .img-set-flex img {
+    flex-grow: 0;
+  }
 }
 
 @media screen and (min-width: 940px) {
+  .desktop-only {
+    display: block;
+  }
+
   #header-name {
     display: block;
     font-weight: bold;
@@ -367,10 +387,16 @@ textarea {
     padding: 100px 0;
   }
 
-  #moolah-layout,
-  #index-layout {
+  #moolah-layout {
     display: flex;
     flex-wrap: nowrap;
+  }
+
+  #index-layout {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
   }
 
   .right-text {
@@ -402,10 +428,88 @@ textarea {
   #moolah-paid {
     grid-area: unset;
   }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: transparent;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #d1a143;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  #flip-img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .blog-post {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .blog-post p {
+    width: 50%;
+    justify-self: end;
+    padding-left: 10px;
+  }
+
+  .img-set-flex {
+    width: 600px;
+  }
 }
 
 @media (prefers-reduced-motion) {
   nav a:hover {
     animation: none;
+  }
+
+  .flip-card-inner {
+    transition: transform 0s;
+  }
+
+  a.skip,
+  a.skip:visited {
+    transition: 0s;
   }
 }
